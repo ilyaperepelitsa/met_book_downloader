@@ -13,6 +13,10 @@ class MetSpider(CrawlSpider):
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='pagination']//li[@class='next']"
         ]), callback='parse_pagination', follow=True),
+
+        Rule(LinkExtractor(restrict_xpaths= [
+            "//*[@class='pagination']//li[@class='next']"
+        ]), callback='parse_pagination', follow=True),
     )
 
     def parse_pagination(self, response):
