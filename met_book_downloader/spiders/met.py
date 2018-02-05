@@ -5,6 +5,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from intercept.items import BookItem
 from scrapy.loader import ItemLoader
 import re
+
 class MetSpider(CrawlSpider):
     name = 'met'
     allowed_domains = ['metmuseum.org']
@@ -33,9 +34,3 @@ class MetSpider(CrawlSpider):
         item_file.add_value('file_urls', str(path))
         item = item_file.load_item()
         yield(item)
-
-
-
-
-pewpew = "trackMetPubsPDFDownloads('http://resources.metmuseum.org/resources/metpublications/pdf/Abbot_Suger_and_Saint_Denis.pdf');"
-"".join(re.findall('\(\'(.*)\'\)', pewpew, re.DOTALL))
