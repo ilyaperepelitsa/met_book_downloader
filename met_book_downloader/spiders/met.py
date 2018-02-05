@@ -30,7 +30,7 @@ class MetSpider(Spider):
         pdf_files = response.xpath('//a[@id="m_download_pdf_link"]/@onclick').extract()
         path = "".join(re.findall('\(\'(.*)\'\)', str(pdf_files), re.DOTALL))
 
-        item_file = ItemLoader(BookItem(), response = response)
-        item_file.add_value('file_urls', str(path))
-        item = item_file.load_item()
+        # item_file = ItemLoader(BookItem(), response = response)
+        # item_file.add_value('file_urls', str(path))
+        # item = item_file.load_item()
         yield(item)
