@@ -36,7 +36,7 @@ ROBOTSTXT_OBEY = True
 #COOKIES_ENABLED = False
 ITEM_PIPELINES = {
     'scrapy.pipelines.files.FilesPipeline': 1,
-    'met_book_downloader.pipelines.BookPipeline': 300,
+    'met_book_downloader.pipelines.MetBookPipeline': 300,
 }
 
 # ITEM_PIPELINES = {
