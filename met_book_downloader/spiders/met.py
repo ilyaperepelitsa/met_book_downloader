@@ -34,4 +34,4 @@ class MetSpider(CrawlSpider):
 
 import re
 pewpew = "trackMetPubsPDFDownloads('http://resources.metmuseum.org/resources/metpublications/pdf/Abbot_Suger_and_Saint_Denis.pdf');"
-re.findall('/(/'(.*)/'/)', pewpew, re.IGNORECASE)
+re.findall('/(/'(.*)/'/)', pewpew)
