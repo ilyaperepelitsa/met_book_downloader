@@ -1,8 +1,8 @@
-#MET museum book downloader
+# MET museum book downloader
 ### Downloads ONLY PDF books posted on
 [MET Website](https://www.metmuseum.org/art/metpublications/all-available-titles)
 ### Original [post](https://news.ycombinator.com/item?id=16303046)
-###from [YC News aka. HackerNews](https://news.ycombinator.com)
+### from [YC News aka. HackerNews](https://news.ycombinator.com)
 
 In order to install scrapy do the following:
 
