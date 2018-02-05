@@ -39,7 +39,7 @@ DOWNLOAD_DELAY = 10
 This means that requests would be delayed by 10 seconds - doing that to be gentle wit
 [MET](https://www.metmuseum.org/art/metpublications/all-available-titles) servers. Please
 The website is slow now so you should consider running the scraper at a later date.
-Don't change t
+Don't change the delay - be respectf
 
 Known issues (checked manually)
 Books not downloaded properly due to size - can't check right now, website is slow
