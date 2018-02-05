@@ -2,7 +2,8 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-
+from intercept.items import InterceptItem
+from scrapy.loader import ItemLoader
 
 class MetSpider(CrawlSpider):
     name = 'met'
