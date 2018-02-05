@@ -9,7 +9,7 @@ import re
 class MetSpider(Spider):
     name = 'met'
     allowed_domains = ['metmuseum.org']
-    start_urls = ['https://www.metmuseum.org/art/metpublications/all-available-titles/']
+    start_urls = ['https://www.metmuseum.org/art/metpublications/all-available-titles/',]
 
     rules = (
         Rule(LinkExtractor(restrict_xpaths= [
