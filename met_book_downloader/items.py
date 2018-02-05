@@ -12,3 +12,8 @@ class MetBookDownloaderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+class InterceptItem(Item):
+    file_urls = Field()
+    files = Field()
+    pass
