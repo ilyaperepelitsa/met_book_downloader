@@ -34,7 +34,17 @@ ROBOTSTXT_OBEY = True
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
+ITEM_PIPELINES = {
+    'scrapy.pipelines.files.FilesPipeline': 1,
+    'intercept.pipelines.InterceptPipeline': 300,
+}
 
+# ITEM_PIPELINES = {
+#     'scrapy.pipelines.files.FilesPipeline': 1,
+#     'intercept.pipelines.InterceptPipeline': 300,
+# }
+
+FILES_STORE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
