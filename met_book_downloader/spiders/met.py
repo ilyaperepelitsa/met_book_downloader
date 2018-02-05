@@ -13,7 +13,7 @@ class MetSpider(Spider):
 
     rules = (
         Rule(LinkExtractor(restrict_xpaths= [
-            "//ul[@class='pagination']/li[@class='next']"
+            "//ul[@class='pagination']//li[@class='next']"
         ]), follow=True),
 
         Rule(LinkExtractor(restrict_xpaths= [
