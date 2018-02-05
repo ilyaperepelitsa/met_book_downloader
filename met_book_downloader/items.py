@@ -13,7 +13,7 @@ class MetBookDownloaderItem():
     # name = scrapy.Field()
     pass
 
-class BookItem(Item):
+class BookItem(Itescrapy.Itemm):
     file_urls = Field()
     files = Field()
     pass
