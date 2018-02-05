@@ -32,6 +32,12 @@ since the files are bulky (art books containing images).
 scrapy crawl met
 ```
 
+The **settings** file in the FERC directory has the setting:
+``` python
+DOWNLOAD_DELAY = 3
+```
+
+
 Known issues (checked manually)
 Books not downloaded properly due to size - can't check right now, website is slow
 (added the setting that wouldn't glitch out on large files, should work in theory)
