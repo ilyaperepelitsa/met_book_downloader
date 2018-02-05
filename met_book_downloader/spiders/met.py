@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule, Spider
-from intercept.items import BookItem
+from met_book_downloader.items import BookItem
 from scrapy.loader import ItemLoader
 import re
 
