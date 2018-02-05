@@ -18,7 +18,7 @@ class MetSpider(Spider):
 
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
-        ]), callback='parse_peliculas', follow=False),
+        ]), callback='parse_peliculas', follow=True)
     )
 
     def parse_peliculas(self, response):
