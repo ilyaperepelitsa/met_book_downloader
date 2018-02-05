@@ -14,7 +14,7 @@ BOT_NAME = 'met_book_downloader'
 SPIDER_MODULES = ['met_book_downloader.spiders']
 NEWSPIDER_MODULE = 'met_book_downloader.spiders'
 
-
+DOWNLOAD_DELAY = 5
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'met_book_downloader (+http://www.yourdomain.com)'
 
@@ -62,12 +62,14 @@ FILES_STORE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SPIDER_MIDDLEWARES = {
 #    'met_book_downloader.middlewares.MetBookDownloaderSpiderMiddleware': 543,
 #}
-
+RANDOM_UA_PER_PROXY = True
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'met_book_downloader.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 1,
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': 2,
+    'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html

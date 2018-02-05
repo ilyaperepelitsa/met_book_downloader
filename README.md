@@ -8,10 +8,12 @@ In order to install scrapy do the following:
 
 ```
 pip3 install scrapy
+pip3 install scrapy-fake-useragent
 ```
 or if your default python is python 3:
 ```
 pip install scrapy
+pip install scrapy-fake-useragent
 ```
 
 Then go select a directory and do the following in the terminal:
@@ -31,13 +33,6 @@ scrapy crawl met
 ```
 
 Known issues (checked manually)
-Books not downloaded properly due to size
-* 2 GB [Art of Medieval Spain](http://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Medieval_Spain_AD_500_1200.pdf)
-* 200 MB [American Stories Paintings of everyday life](http://resources.metmuseum.org/resources/metpublications/pdf/American_Stories_Paintings_of_Everyday_Life_1765_1915.pdf)
-* 200 MB [Art of Illumination](http://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Illumination_The_Limbourg_Brothers_and_the_Belles_Heures_of_Jean_de_France_Duc_de_Berr.pdf)
-
-
+Books not downloaded properly due to size - can't check right now, website is slow
+(added the setting that wouldn't glitch out on large files, should work in theory)
 Books not downloaded properly due to Met's file address redirecting to ".pdf.html"
-(Don't want to troubleshoot HTTP requests tbh, easier to look by name at [MET Website](https://www.metmuseum.org/art/metpublications/all-available-titles))
-
-* [Artistic furniture of the Gilded Age](http://resources.metmuseum.org/resources/metpublications/pdf/Artistic_Furniture_of_the_Gilded_Age.pdf)
