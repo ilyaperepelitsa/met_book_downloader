@@ -7,7 +7,7 @@ from scrapy.spiders import CrawlSpider, Rule
 class MetSpider(CrawlSpider):
     name = 'met'
     allowed_domains = ['metmuseum.org']
-    start_urls = ['http://metmuseum.org/']
+    start_urls = ['https://www.metmuseum.org/art/metpublications/all-available-titles']
 
     rules = (
         Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
