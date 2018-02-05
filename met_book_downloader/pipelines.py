@@ -10,7 +10,7 @@ import os
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.exceptions import DropItem
 
-
+file_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'full')
 
 class MetBookDownloaderPipeline(object):
     def process_item(self, item, spider):
