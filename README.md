@@ -36,7 +36,7 @@ The **settings** file in the FERC directory has the setting:
 ``` python
 DOWNLOAD_DELAY = 10
 ```
-This means that requests would be delayed by 10
+This means that requests would be delayed by 10 seconds
 
 Known issues (checked manually)
 Books not downloaded properly due to size - can't check right now, website is slow
