@@ -20,8 +20,12 @@ class MetSpider(CrawlSpider):
     )
 
     def parse_book(self, response):
-        i = {}
-        #i['domain_id'] = response.xpath('//input[@id="sid"]/@value').extract()
-        #i['name'] = response.xpath('//div[@id="name"]').extract()
-        #i['description'] = response.xpath('//div[@id="description"]').extract()
+article = ItemLoader(item = ArticleItem(), response = response)
+        article.add_value('url', response.url)
+        article.add_xpath("article_text", '//div[contains(@class, "article-entry text")]/p/text()', Join())
+        article.add_xpath("article_title", '//h1/text()', Join())
+        article.add_xpath("author_name", '//div[@class = "byline"]/a[@rel="author"]/text()')
+        article.add_xpath("date_published", '//meta[@name = "sailthru.date"]/@content', Join())
+
+        item = article.load_item()
         return i
