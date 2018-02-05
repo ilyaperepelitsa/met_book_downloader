@@ -21,14 +21,14 @@ class MetSpider(Spider):
         ]), callback='parse', follow=True),
     )
 
-    def parse_book(self, response):
+    def parse   (self, response):
         article = ItemLoader(item = BookItem(), response = response)
         # article.add_value('url', response.url)
         # article.add_xpath("book_title", '//div[@class="metpubs-title-container"]/text()', Join())
         # article.add_xpath("book_author", '//div[@class="metpubs-author-subcontainer"]/text()', Join())
 
         pdf_files = response.xpath('//a[@id="m_download_pdf_link"]/@onclick').extract()
-        path = "".join(re.findall('\(\'(.*)\'\)', pewpew, re.DOTALL))
+        path = "".join(re.findall('\(\'(.*)\'\)', pdf_files, re.DOTALL))
 
         item_file = ItemLoader(BookItem(), response = response)
         item_file.add_value('file_urls', str(path))
