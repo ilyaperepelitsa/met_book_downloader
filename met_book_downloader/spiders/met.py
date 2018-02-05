@@ -6,7 +6,7 @@ from met_book_downloader.items import BookItem
 from scrapy.loader import ItemLoader
 import re
 
-class MetSpider(Spider):
+class MetSpider(CrawlSpider):
     name = 'met'
     allowed_domains = ['metmuseum.org']
     start_urls = ['https://www.metmuseum.org/art/metpublications/all-available-titles/',]
