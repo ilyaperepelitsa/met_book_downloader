@@ -33,4 +33,5 @@ class MetSpider(Spider):
         # item_file = ItemLoader(BookItem(), response = response)
         # item_file.add_value('file_urls', str(path))
         # item = item_file.load_item()
-        yield(item)
+        # yield(item)
+        
