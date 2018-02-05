@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from intercept.items import InterceptItem
+from intercept.items import BookItem
 from scrapy.loader import ItemLoader
 
 class MetSpider(CrawlSpider):
