@@ -28,6 +28,7 @@ class MetSpider(CrawlSpider):
         # article.add_xpath("book_author", '//div[@class="metpubs-author-subcontainer"]/text()', Join())
 
         pdf_files = response.xpath('//a[@id="m_download_pdf_link"]/@onclick').extract()
+        if len
         path = re.findall('\(\'(.*)\'\)', str(pdf_files), re.DOTALL)
 
         item_file = ItemLoader(BookItem(), response = response)
