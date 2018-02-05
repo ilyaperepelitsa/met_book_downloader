@@ -43,7 +43,10 @@ ITEM_PIPELINES = {
 #     'scrapy.pipelines.files.FilesPipeline': 1,
 #     'intercept.pipelines.InterceptPipeline': 300,
 # }
-
+DOWNLOAD_MAXSIZE = 0
+DOWNLOAD_WARNSIZE = 0
+MEMUSAGE_LIMIT_MB = 0
+MEMUSAGE_WARNING_MB = 0
 FILES_STORE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
