@@ -18,10 +18,10 @@ class MetSpider(Spider):
 
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
-        ]), callback='parse', follow=False),
+        ]), callback='parse_peliculas', follow=False),
     )
 
-    def parse(self, response):
+    def parse_peliculas(self, response):
         article = ItemLoader(item = BookItem(), response = response)
         # article.add_value('url', response.url)
         # article.add_xpath("book_title", '//div[@class="metpubs-title-container"]/text()', Join())
