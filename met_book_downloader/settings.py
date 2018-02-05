@@ -14,7 +14,7 @@ BOT_NAME = 'met_book_downloader'
 SPIDER_MODULES = ['met_book_downloader.spiders']
 NEWSPIDER_MODULE = 'met_book_downloader.spiders'
 
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 10
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'met_book_downloader (+http://www.yourdomain.com)'
 
