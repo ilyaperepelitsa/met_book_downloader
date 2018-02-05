@@ -10,7 +10,9 @@ class MetSpider(CrawlSpider):
     start_urls = ['https://www.metmuseum.org/art/metpublications/all-available-titles']
 
     rules = (
-        Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(restrict_xpaths= [
+            "//*[@class='pagination']//li[@class='next']"
+        ]), callback='parse_pagination', follow=True),
     )
 
     def parse_item(self, response):
