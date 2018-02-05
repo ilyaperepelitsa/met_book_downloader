@@ -15,11 +15,11 @@ class MetSpider(CrawlSpider):
         ]), follow=True),
 
         Rule(LinkExtractor(restrict_xpaths= [
-            "//*[@class='metpubs-result']//*[@class='next']"
+            "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
         ]), callback='parse_pagination', follow=True),
     )
 
-    def parse_pagination(self, response):
+    def parse_book(self, response):
         i = {}
         #i['domain_id'] = response.xpath('//input[@id="sid"]/@value').extract()
         #i['name'] = response.xpath('//div[@id="name"]').extract()
