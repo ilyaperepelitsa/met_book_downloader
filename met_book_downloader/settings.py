@@ -34,10 +34,10 @@ ROBOTSTXT_OBEY = True
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
-# ITEM_PIPELINES = {
-#     'scrapy.pipelines.files.FilesPipeline': 1,
-#     'met_book_downloader.pipelines.MetBookPipeline': 300,
-# }
+ITEM_PIPELINES = {
+    'scrapy.pipelines.files.FilesPipeline': 1,
+    'met_book_downloader.pipelines.MetBookPipeline': 300,
+}
 
 # ITEM_PIPELINES = {
 #     'scrapy.pipelines.files.FilesPipeline': 1,
