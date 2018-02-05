@@ -14,7 +14,7 @@ class MetSpider(Spider):
     rules = (
         Rule(LinkExtractor(restrict_xpaths= [
             "//ul[@class='pagination']//li[@class='next']"
-        ]), follow=False),
+        ]), follow=True),
 
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
