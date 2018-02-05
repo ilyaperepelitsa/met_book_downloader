@@ -34,9 +34,9 @@ scrapy crawl met
 
 The **settings** file in the FERC directory has the setting:
 ``` python
-DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 10
 ```
-
+This means tha
 
 Known issues (checked manually)
 Books not downloaded properly due to size - can't check right now, website is slow
