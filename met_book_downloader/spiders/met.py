@@ -20,7 +20,7 @@ class MetSpider(CrawlSpider):
     )
 
     def parse_book(self, response):
-article = ItemLoader(item = ArticleItem(), response = response)
+        article = ItemLoader(item = BookItem(), response = response)
         article.add_value('url', response.url)
         article.add_xpath("article_text", '//div[contains(@class, "article-entry text")]/p/text()', Join())
         article.add_xpath("article_title", '//h1/text()', Join())
