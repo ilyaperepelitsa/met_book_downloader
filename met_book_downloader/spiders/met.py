@@ -24,8 +24,8 @@ class MetSpider(CrawlSpider):
         article.add_value('url', response.url)
         article.add_xpath("book_title", '//div[@class="metpubs-title-container"]/text()', Join())
         article.add_xpath("book_author", '//div[@class="metpubs-author-subcontainer"]/text()', Join())
-        article.add_xpath("author_name", '//div[@class = "byline"]/a[@rel="author"]/text()')
-        article.add_xpath("date_published", '//meta[@name = "sailthru.date"]/@content', Join())
 
+        pdf_files = response.xpath('//pre/a/@href').extract()
+        
         item = article.load_item()
         return i
