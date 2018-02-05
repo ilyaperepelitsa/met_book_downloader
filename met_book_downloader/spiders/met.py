@@ -18,7 +18,7 @@ class MetSpider(Spider):
 
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
-        ]), callback='parse_book', follow=True),
+        ]), callback='parse', follow=True),
     )
 
     def parse_book(self, response):
