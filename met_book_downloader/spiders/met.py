@@ -15,7 +15,7 @@ class MetSpider(CrawlSpider):
         ]), callback='parse_pagination', follow=True),
     )
 
-    def parse_item(self, response):
+    def parse_pagination(self, response):
         i = {}
         #i['domain_id'] = response.xpath('//input[@id="sid"]/@value').extract()
         #i['name'] = response.xpath('//div[@id="name"]').extract()
