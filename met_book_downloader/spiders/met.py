@@ -6,7 +6,7 @@ from intercept.items import BookItem
 from scrapy.loader import ItemLoader
 import re
 
-class MetSpider(CrawlSpider):
+class MetSpider(scrapy.Spider):
     name = 'met'
     allowed_domains = ['metmuseum.org']
     start_urls = ['https://www.metmuseum.org/art/metpublications/all-available-titles']
