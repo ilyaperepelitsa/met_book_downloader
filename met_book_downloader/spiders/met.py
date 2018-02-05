@@ -16,7 +16,7 @@ class MetSpider(CrawlSpider):
 
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
-        ]), callback='parse_pagination', follow=True),
+        ]), callback='parse_book', follow=True),
     )
 
     def parse_book(self, response):
