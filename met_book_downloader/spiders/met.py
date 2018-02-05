@@ -18,7 +18,7 @@ class MetSpider(CrawlSpider):
 
         Rule(LinkExtractor(restrict_xpaths= [
             "//*[@class='metpubs-result']//*[@class='metpubs-result-button-container']"
-        ]), callback='parse', follow=True)
+        ]), callback='parse_pew', follow=True)
     )
 
     def parse(self, response):
