@@ -15,7 +15,7 @@ class MetSpider(CrawlSpider):
         ]), follow=True),
 
         Rule(LinkExtractor(restrict_xpaths= [
-            "//*[@class='metpubs-resu']//li[@class='next']"
+            "//*[@class='metpubs-result']//*[@class='next']"
         ]), callback='parse_pagination', follow=True),
     )
 
