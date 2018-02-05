@@ -28,8 +28,10 @@ class MetSpider(CrawlSpider):
         pdf_files = response.xpath('//a[@id="m_download_pdf_link"]/@onclick').extract()
         path = "".join(re.findall('\(\'(.*)\'\)', pewpew, re.DOTALL))
         
-        item = article.load_item()
-        return i
+        item_file = ItemLoader(InterceptItem(), response = response)
+        item_file.add_value('file_urls', str(pdf_file))
+        item = item_file.load_item()
+        yield(item)
 
 
 
