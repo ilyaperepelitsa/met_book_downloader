@@ -12,7 +12,7 @@ from scrapy.exceptions import DropItem
 
 file_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'full')
 
-class MetBookDownloaderPipeline(object):
+class MetBookPipeline(object):
     def process_item(self, item, spider):
         file_url = item['file_urls'][0]
         filename = file_url.split("/")[-1].replace("_", " ")
