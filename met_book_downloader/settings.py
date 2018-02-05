@@ -11,7 +11,7 @@ import os
 
 BOT_NAME = 'met_book_downloader'
 
-SPIDER_MODULES = ['met_book_downloader.spiders.met']
+SPIDER_MODULES = ['met_book_downloader.spiders']
 NEWSPIDER_MODULE = 'met_book_downloader.spiders'
 
 
