@@ -34,4 +34,4 @@ class MetSpider(Spider):
         # item_file.add_value('file_urls', path)
         # item = item_file.load_item()
         # yield(item)
-        yield {"pewpewpewpewpwe" : path}
+        yield {response.url : path}
