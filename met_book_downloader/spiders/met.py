@@ -21,7 +21,7 @@ class MetSpider(Spider):
         ]), callback='parse', follow=False),
     )
 
-    def parse   (self, response):
+    def parse(self, response):
         article = ItemLoader(item = BookItem(), response = response)
         # article.add_value('url', response.url)
         # article.add_xpath("book_title", '//div[@class="metpubs-title-container"]/text()', Join())
